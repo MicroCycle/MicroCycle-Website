@@ -13,7 +13,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <a href="index.html" class="nav-logo">
-            <img src="images\MicroCycle Logo Colorful.png" alt="MicroCycle Logo" class="nav-logo-img">
+            <img src="MicroCycle_Logo_Colorful.png" alt="MicroCycle Logo" class="nav-logo-img">
             MicroCycle
         </a>
         <ul class="nav-links">
@@ -39,11 +39,11 @@
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-heat-press">
-            <img src="images\MicroCycler.png" alt="Heat Press">
+            <img src="MicroCycle_Demo_Day_Quarter_Card.png" alt="Heat Press">
         </div>
         <div class="hero-content">
             <div class="hero-brand">
-                <img src="images\MicroCycle Logo Colorful.png" alt="MicroCycle Logo" class="hero-logo">
+                <img src="MicroCycle_Logo_Colorful.png" alt="MicroCycle Logo" class="hero-logo">
                 <h1>MicroCycle</h1>
             </div>
             <p>3D printing is incredible, but a third of filament goes to waste. MicroCycle transforms your PLA scraps into beautiful, laser-cuttable sheets with our small, accessible heat press.</p>
@@ -245,10 +245,10 @@
     <!-- Footer -->
     <footer>
         <div class="footer-simple">
-            <img src="images\MicroCycle Logo Colorful.png" alt="MicroCycle Logo" class="footer-logo">
+            <img src="MicroCycle_Logo_Colorful.png" alt="MicroCycle Logo" class="footer-logo">
             <h3>MicroCycle</h3>
             <p class="footer-tagline">Recycle Your Plastic Waste Into Fun & Creative New Materials</p>
-            <a href="mailto:teammicrocycle@gmail.com" class="footer-email">teammicrocycle@gmail.com</a>
+            <a href="/cdn-cgi/l/email-protection#116574707c7c7872637e7268727d7451767c70787d3f727e7c" class="footer-email"><span class="__cf_email__" data-cfemail="9eeafbfff3f3f7fdecf1fde7fdf2fbdef9f3fff7f2b0fdf1f3">[email&#160;protected]</span></a>
             <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
                 <a href="#" class="btn-primary" onclick="alert('Newsletter signup coming soon!'); return false;" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -269,7 +269,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('navbar');
@@ -307,4 +307,15 @@
             const sheets = Math.round((wasteKg * 1000) / 50);
             
             wasteResult.textContent = wasteKg.toLocaleString();
-            sheetsResult.textContent = sheets.toL
+            sheetsResult.textContent = sheets.toLocaleString();
+        }
+
+        rollsSlider.addEventListener('input', updateCalculator);
+        failSlider.addEventListener('input', updateCalculator);
+        
+        // Initial calculation
+        updateCalculator();
+    </script>
+</body>
+</html>
+      
