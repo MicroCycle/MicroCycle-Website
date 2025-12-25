@@ -415,11 +415,60 @@
             position: relative;
             transition: all 0.4s ease;
             box-shadow: 0 10px 40px rgba(26, 158, 150, 0.08);
+            border: 3px solid transparent;
+            overflow: hidden;
         }
         
         .step-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(26, 158, 150, 0.15);
+            border-color: var(--orange);
+        }
+        
+        .step-card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+            background: linear-gradient(135deg, rgba(26, 158, 150, 0.9), rgba(72, 201, 176, 0.85));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .step-card:hover .step-card-bg {
+            opacity: 1;
+        }
+        
+        .step-card-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .step-card-bg-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+        
+        .step-card-bg-placeholder svg {
+            width: 60%;
+            height: 60%;
+            color: var(--teal-dark);
+            opacity: 0.3;
+        }
+        
+        .step-card-content {
+            position: relative;
+            z-index: 2;
         }
         
         .step-number {
@@ -535,6 +584,16 @@
             background: var(--orange);
             cursor: pointer;
             box-shadow: 0 2px 10px rgba(245, 166, 35, 0.4);
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--orange);
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(245, 166, 35, 0.4);
+            border: none;
         }
         
         .range-value {
@@ -931,7 +990,7 @@
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="nav-logo">
+        <a href="#home" class="nav-logo">
             <img src="MicroCycle_Logo_Colorful.png" alt="MicroCycle Logo" class="nav-logo-img">
             MicroCycle
         </a>
@@ -950,6 +1009,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="product">
+        <a id="home"></a>
         <div class="hero-bg"></div>
         <div class="hero-heat-press">
             <img src="MicroCycle_Demo_Day_Quarter_Card.png" alt="Heat Press">
@@ -1015,34 +1075,61 @@
         </div>
         <div class="steps-container">
             <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-icon">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611l-.92.153A9.065 9.065 0 0112 21a9.065 9.065 0 01-7.215-1.034l-.92-.153c-1.717-.293-2.3-2.379-1.067-3.61L5 14.5"/>
-                    </svg>
+                <div class="step-card-bg">
+                    <div class="step-card-bg-placeholder">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611l-.92.153A9.065 9.065 0 0112 21a9.065 9.065 0 01-7.215-1.034l-.92-.153c-1.717-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+                        </svg>
+                    </div>
                 </div>
-                <h3>Grind</h3>
-                <p>Shred old 3D prints and other PLA waste into small pieces</p>
+                <div class="step-card-content">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611l-.92.153A9.065 9.065 0 0112 21a9.065 9.065 0 01-7.215-1.034l-.92-.153c-1.717-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+                        </svg>
+                    </div>
+                    <h3>Grind</h3>
+                    <p>Shred old 3D prints and other PLA waste into small pieces</p>
+                </div>
             </div>
             <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-icon">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
-                    </svg>
+                <div class="step-card-bg">
+                    <div class="step-card-bg-placeholder">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
+                        </svg>
+                    </div>
                 </div>
-                <h3>Press</h3>
-                <p>Place a combination of PLA shreds and acrylic in our heat press</p>
+                <div class="step-card-content">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
+                        </svg>
+                    </div>
+                    <h3>Press</h3>
+                    <p>Place a combination of PLA shreds and acrylic in our heat press</p>
+                </div>
             </div>
             <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-icon">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
-                    </svg>
+                <div class="step-card-bg">
+                    <div class="step-card-bg-placeholder">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+                        </svg>
+                    </div>
                 </div>
-                <h3>Use</h3>
-                <p>Laser cut your gorgeous custom sheets into new creations!</p>
+                <div class="step-card-content">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+                        </svg>
+                    </div>
+                    <h3>Use</h3>
+                    <p>Laser cut your gorgeous custom sheets into new creations!</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1060,8 +1147,8 @@
             <div class="input-row">
                 <div class="input-group">
                     <label>Rolls of PLA used per month</label>
-                    <input type="range" id="rolls" min="1" max="50" value="10">
-                    <div class="range-value"><span id="rollsValue">10</span> rolls</div>
+                    <input type="range" id="rolls" min="1" max="20" value="10">
+                    <div class="range-value"><span id="rollsValue">10</span></div>
                 </div>
                 <div class="input-group">
                     <label>Prints that fail (%)</label>
@@ -1171,10 +1258,10 @@
             rollsValue.textContent = rolls;
             failValue.textContent = failRate;
             
-            // Calculate waste (assuming ~1kg per roll, fail rate percentage)
+            // Calculate waste: rolls per month × 12 months × 1kg per roll × fail rate
             const wasteKg = Math.round(rolls * 12 * (failRate / 100));
-            // Calculate sheets (assuming ~50g per sheet)
-            const sheets = Math.round(wasteKg * 20);
+            // Calculate sheets: waste kg × 1000g/kg ÷ 50g per sheet
+            const sheets = Math.round((wasteKg * 1000) / 50);
             
             wasteResult.textContent = wasteKg.toLocaleString();
             sheetsResult.textContent = sheets.toLocaleString();
@@ -1190,4 +1277,15 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
