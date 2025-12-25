@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - MicroCycle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="MicroCycle_Logo_Colorful.png" alt="MicroCycle Logo" class="nav-logo-img">
+            MicroCycle
+        </a>
+        <ul class="nav-links">
+            <li><a href="how-it-works.html" class="active">How It Works</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="get-the-microcycler.html">Get the MicroCycler</a></li>
+        </ul>
+        <a href="get-the-microcycler.html" class="nav-cta">Get Started</a>
+        <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="how-it-works.html">How It Works</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="get-the-microcycler.html">Get the MicroCycler</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>How It Works</h1>
+        <p>Transform your 3D print waste into beautiful, laser-cuttable sheets with our simple three-step process.</p>
+    </section>
+
+    <!-- Machine Overview -->
+    <section class="content-section alt-bg">
+        <div class="content-wrapper">
+            <div class="two-col-grid">
+                <div>
+                    <span class="section-tag">The MicroCycler</span>
+                    <h2 style="font-family: 'Quicksand', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem;">A Compact, Powerful Heat Press</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1.5rem;">The MicroCycler is designed specifically for maker spaces, schools, and individual creators. Our compact heat press fits on any workbench and transforms PLA waste into stunning, colorful sheets that can be laser cut into new creations.</p>
+                    <ul style="color: var(--gray); line-height: 2; list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal-dark)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            Compact desktop design
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal-dark)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            Easy to operate
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal-dark)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            Low-cost solution for makers
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal-dark)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            Creates laser-cuttable sheets
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-placeholder" style="aspect-ratio: 4/3;">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                    </svg>
+                    <span class="image-placeholder-text">MicroCycler Machine Image</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Process Section -->
+    <section class="content-section">
+        <div class="content-wrapper">
+            <div class="section-header">
+                <span class="section-tag">The Process</span>
+                <h2>Three Simple Steps</h2>
+                <p>From waste to beautiful materials in minutes</p>
+            </div>
+            
+            <div class="three-col-grid">
+                <!-- Step 1 -->
+                <div class="process-detail-card">
+                    <div class="image-placeholder process-detail-image">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611l-.92.153A9.065 9.065 0 0112 21a9.065 9.065 0 01-7.215-1.034l-.92-.153c-1.717-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+                        </svg>
+                        <span class="image-placeholder-text">Grinding Process</span>
+                    </div>
+                    <div class="process-detail-content">
+                        <h3><span>1</span> Grind</h3>
+                        <p>Collect your failed prints, support structures, and other PLA waste. Use a standard grinder or shredder to break them down into small pieces. The smaller the pieces, the better the final result!</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-detail-card">
+                    <div class="image-placeholder process-detail-image">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
+                        </svg>
+                        <span class="image-placeholder-text">Pressing Process</span>
+                    </div>
+                    <div class="process-detail-content">
+                        <h3><span>2</span> Press</h3>
+                        <p>Spread your PLA shreds evenly in the MicroCycler, layered with clear acrylic sheets. The heat press melts and fuses the materials together, creating a solid, beautiful sheet with unique patterns.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-detail-card">
+                    <div class="image-placeholder process-detail-image">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+                        </svg>
+                        <span class="image-placeholder-text">Finished Creations</span>
+                    </div>
+                    <div class="process-detail-content">
+                        <h3><span>3</span> Use</h3>
+                        <p>Your new custom sheets are ready! Take them to a laser cutter to create jewelry, ornaments, signs, home decor, and more. Each sheet is completely unique based on the colors you used.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Gallery -->
+    <section class="content-section alt-bg">
+        <div class="content-wrapper">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>From waste collection to finished products</p>
+            </div>
+            
+            <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="width: 100%; height: 100%;">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="width: 100%; height: 100%;">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="width: 100%; height: 100%;">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="width: 100%; height: 100%;">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="width: 100%; height: 100%;">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="width: 100%; height: 100%;">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Can Create -->
+    <section class="content-section teal-bg">
+        <div class="content-wrapper">
+            <div class="section-header">
+                <h2>What Can You Create?</h2>
+                <p style="color: rgba(255,255,255,0.9);">The possibilities are endless with your custom recycled sheets</p>
+            </div>
+            
+            <div class="three-col-grid" style="text-align: center;">
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💎</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Jewelry</h3>
+                    <p>Earrings, pendants, bracelets, and more with unique swirl patterns</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🏠</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Home Decor</h3>
+                    <p>Coasters, ornaments, wall art, and decorative pieces</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Art Projects</h3>
+                    <p>Custom signs, sculptures, mosaics, and creative installations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Start Recycling?</h2>
+            <p>Join the sustainable making movement and transform your waste into beautiful creations.</p>
+            <div class="cta-buttons">
+                <a href="get-the-microcycler.html" class="btn-white">Get the MicroCycler</a>
+                <a href="our-story.html" class="btn-outline-white">Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-simple">
+            <img src="MicroCycle_Logo_Colorful.png" alt="MicroCycle Logo" class="footer-logo">
+            <h3>MicroCycle</h3>
+            <p class="footer-tagline">Recycle Your Plastic Waste Into Fun & Creative New Materials</p>
+            <a href="mailto:teammicrocycle@gmail.com" class="footer-email">teammicrocycle@gmail.com</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 MicroCycle. Made with ♥ for a sustainable future.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
