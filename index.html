@@ -71,16 +71,16 @@
             </div>
             <div class="problem-stats-box">
                 <div class="stat-item">
-                    <span class="stat-number">1/3</span>
+                    <span class="stat-number">One third</span>
                     <span class="stat-label">of 3D print filament is wasted</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">100ks</span>
-                    <span class="stat-label">kg of PLA waste yearly</span>
+                    <span class="stat-number">100,000s</span>
+                    <span class="stat-label">of kg of PLA waste yearly</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">Low-Cost</span>
-                    <span class="stat-label">solution for makers</span>
+                    <span class="stat-number">Millions of $</span>
+                    <span class="stat-label">wasted each year</span>
                 </div>
             </div>
         </div>
@@ -132,41 +132,6 @@
         </div>
         <div class="section-cta">
             <a href="how-it-works.html" class="btn-primary">See Full Process</a>
-        </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section class="calculator-section" id="calculator">
-        <div class="section-header">
-            <h2>How Much Will You Save?</h2>
-            <p>See how MicroCycle can transform your waste into beautiful materials</p>
-        </div>
-        <div class="calculator-container">
-            <div class="calculator-header">
-                <h3>Calculate Your Savings</h3>
-            </div>
-            <div class="input-row">
-                <div class="input-group">
-                    <label>Rolls of PLA used per month</label>
-                    <input type="range" id="rolls" min="1" max="20" value="10">
-                    <div class="range-value"><span id="rollsValue">10</span></div>
-                </div>
-                <div class="input-group">
-                    <label>Prints that fail (%)</label>
-                    <input type="range" id="failRate" min="5" max="50" value="20">
-                    <div class="range-value"><span id="failValue">20</span>%</div>
-                </div>
-            </div>
-            <div class="results-display">
-                <div class="result-item">
-                    <div class="result-value" id="wasteResult">200</div>
-                    <div class="result-label">kg of PLA waste per year</div>
-                </div>
-                <div class="result-item">
-                    <div class="result-value result-highlight" id="sheetsResult">4,000</div>
-                    <div class="result-label">beautiful custom PLA sheets you could create!</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -269,36 +234,6 @@
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
         }
-
-        // Calculator functionality
-        const rollsSlider = document.getElementById('rolls');
-        const failSlider = document.getElementById('failRate');
-        const rollsValue = document.getElementById('rollsValue');
-        const failValue = document.getElementById('failValue');
-        const wasteResult = document.getElementById('wasteResult');
-        const sheetsResult = document.getElementById('sheetsResult');
-
-        function updateCalculator() {
-            const rolls = parseInt(rollsSlider.value);
-            const failRate = parseInt(failSlider.value);
-            
-            rollsValue.textContent = rolls;
-            failValue.textContent = failRate;
-            
-            // Calculate waste: rolls per month × 12 months × 1kg per roll × fail rate
-            const wasteKg = Math.round(rolls * 12 * (failRate / 100));
-            // Calculate sheets: waste kg × 1000g/kg ÷ 50g per sheet
-            const sheets = Math.round((wasteKg * 1000) / 50);
-            
-            wasteResult.textContent = wasteKg.toLocaleString();
-            sheetsResult.textContent = sheets.toLocaleString();
-        }
-
-        rollsSlider.addEventListener('input', updateCalculator);
-        failSlider.addEventListener('input', updateCalculator);
-        
-        // Initial calculation
-        updateCalculator();
     </script>
 </body>
 </html>

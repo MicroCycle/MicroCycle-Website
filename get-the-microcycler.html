@@ -85,6 +85,41 @@
         </div>
     </section>
 
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="section-header">
+            <h2>How Much Will You Save?</h2>
+            <p>See how MicroCycle can transform your waste into beautiful materials</p>
+        </div>
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h3>Calculate Your Savings</h3>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Rolls of PLA used per month</label>
+                    <input type="range" id="rolls" min="1" max="20" value="10">
+                    <div class="range-value"><span id="rollsValue">10</span></div>
+                </div>
+                <div class="input-group">
+                    <label>Prints that fail (%)</label>
+                    <input type="range" id="failRate" min="5" max="50" value="20">
+                    <div class="range-value"><span id="failValue">20</span>%</div>
+                </div>
+            </div>
+            <div class="results-display">
+                <div class="result-item">
+                    <div class="result-value" id="wasteResult">200</div>
+                    <div class="result-label">kg of PLA waste per year</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value result-highlight" id="sheetsResult">4,000</div>
+                    <div class="result-label">beautiful custom PLA sheets you could create!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Coming Soon Section -->
     <section class="content-section alt-bg">
         <div class="content-wrapper">
@@ -195,4 +230,43 @@
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('scr
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        };
+        
+        // Calculator functionality
+        const rollsSlider = document.getElementById('rolls');
+        const failSlider = document.getElementById('failRate');
+        const rollsValue = document.getElementById('rollsValue');
+        const failValue = document.getElementById('failValue');
+        const wasteResult = document.getElementById('wasteResult');
+        const sheetsResult = document.getElementById('sheetsResult');
+
+        function updateCalculator() {
+            const rolls = parseInt(rollsSlider.value);
+            const failRate = parseInt(failSlider.value);
+            
+            rollsValue.textContent = rolls;
+            failValue.textContent = failRate;
+            
+            // Calculate waste: rolls per month × 12 months × 1kg per roll × fail rate
+            const wasteKg = Math.round(rolls * 12 * (failRate / 100));
+            // Calculate sheets: waste kg × 1000g/kg ÷ 50g per sheet
+            const sheets = Math.round((wasteKg * 1000) / 50);
+            
+            wasteResult.textContent = wasteKg.toLocaleString();
+            sheetsResult.textContent = sheets.toLocaleString();
+        }
+
+        rollsSlider.addEventListener('input', updateCalculator);
+        failSlider.addEventListener('input', updateCalculator);
+        
+        // Initial calculation
+        updateCalculator();
+    </script>

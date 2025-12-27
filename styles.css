@@ -893,6 +893,7 @@ footer {
     text-align: center;
     position: relative;
     overflow: hidden;
+    animation: fadeInUp 1s ease;
 }
 
 .page-hero::before {
