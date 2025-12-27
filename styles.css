@@ -424,7 +424,7 @@ nav.scrolled {
 
 .problem-stats-box .stat-number {
     font-family: 'Quicksand', sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     display: block;
     color: var(--teal-dark);
