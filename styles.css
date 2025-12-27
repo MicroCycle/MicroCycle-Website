@@ -424,14 +424,14 @@ nav.scrolled {
 
 .problem-stats-box .stat-number {
     font-family: 'Quicksand', sans-serif;
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     font-weight: 700;
     display: block;
     color: var(--teal-dark);
 }
 
 .problem-stats-box .stat-label {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--gray);
 }
 
@@ -1253,7 +1253,7 @@ footer {
     }
     
     .problem-image-box {
-        min-height: 250px;
+        height: 250px;
     }
     
     .problem-stats-box {
