@@ -562,6 +562,8 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    background-size: cover;
 }
 
 .step-icon svg {
