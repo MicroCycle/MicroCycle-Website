@@ -1400,3 +1400,358 @@ footer {
         padding: 2rem;
     }
 }
+
+/* ============================================
+   NEW SECTIONS - Added for updated layout
+   ============================================ */
+
+/* NEW: Solution Section - Two Column Layout */
+.solution-section-new {
+    background: var(--cream);
+}
+
+.solution-header-banner {
+    background: linear-gradient(135deg, var(--teal-dark), var(--turquoise));
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.solution-header-banner h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.solution-content-wrapper {
+    display: flex;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+    align-items: center;
+}
+
+.solution-text-column {
+    flex: 1;
+}
+
+.solution-intro-text {
+    font-size: 1.15rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.solution-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.benefit-check {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: linear-gradient(135deg, var(--teal-dark), var(--turquoise));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(26, 158, 150, 0.3);
+}
+
+.benefit-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.solution-image-column {
+    flex: 1;
+}
+
+.solution-image-box {
+    background: linear-gradient(135deg, rgba(26, 158, 150, 0.1), rgba(72, 201, 176, 0.15));
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: 0 20px 60px rgba(26, 158, 150, 0.15);
+}
+
+.solution-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NEW: Transform Steps Section */
+.transform-steps-section {
+    padding: 5rem 5%;
+    background: white;
+}
+
+.transform-steps-section .section-header {
+    margin-bottom: 3rem;
+}
+
+.transform-steps-section .section-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.steps-grid-new {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.step-row-reverse {
+    direction: rtl;
+}
+
+.step-row-reverse > * {
+    direction: ltr;
+}
+
+.step-card-new {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.step-card-new:hover {
+    border-color: var(--teal-light);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(26, 158, 150, 0.12);
+}
+
+.step-badge {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
+}
+
+.step-card-new h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+    margin-bottom: 0.75rem;
+}
+
+.step-card-new p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.step-image-box {
+    background: linear-gradient(135deg, rgba(26, 158, 150, 0.08), rgba(72, 201, 176, 0.12));
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-image-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.step-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal-dark);
+    opacity: 1;
+}
+
+/* NEW: Showcase Section with Captions */
+.showcase-section {
+    padding: 4rem 5%;
+    background: linear-gradient(135deg, rgba(26, 158, 150, 0.05), rgba(72, 201, 176, 0.08));
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.showcase-item {
+    text-align: center;
+}
+
+.showcase-image {
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 40px rgba(26, 158, 150, 0.1);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.showcase-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(26, 158, 150, 0.2);
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-caption {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Stay Connected Section with Background */
+.stay-connected-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--teal-dark), var(--turquoise));
+}
+
+.stay-connected-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('MicroCycle_Demo_Day_Quarter_Card.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.stay-connected-section .content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.stay-connected-section .section-header h2,
+.stay-connected-section .section-header p {
+    color: white;
+}
+
+/* Gallery placeholder with images */
+.gallery-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NEW SECTIONS - Responsive Styles */
+@media (max-width: 1024px) {
+    .solution-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .solution-benefits {
+        align-items: center;
+    }
+    
+    .benefit-item {
+        justify-content: center;
+    }
+    
+    .step-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .showcase-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-header-banner h2 {
+        font-size: 1.5rem;
+    }
+    
+    .step-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .step-row-reverse {
+        direction: ltr;
+    }
+    
+    .step-card-new {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .step-image-box {
+        min-height: 150px;
+    }
+    
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .showcase-image {
+        aspect-ratio: 1;
+    }
+}
