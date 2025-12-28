@@ -1756,3 +1756,383 @@ footer {
         aspect-ratio: 1;
     }
 }
+/* ============================================
+   GET THE MICROCYCLER PAGE - New Layout
+   ============================================ */
+
+/* Features Two Column Section */
+.features-two-col {
+    padding: 4rem 5%;
+    background: white;
+}
+
+.features-content-wrapper {
+    display: flex;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.features-text-column {
+    flex: 1;
+}
+
+.features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-bullet {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: linear-gradient(135deg, var(--teal-dark), var(--turquoise));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(26, 158, 150, 0.3);
+}
+
+.feature-item span {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.features-image-column {
+    flex: 1.2;
+}
+
+.features-image-box {
+    background: linear-gradient(135deg, rgba(26, 158, 150, 0.08), rgba(72, 201, 176, 0.12));
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: 0 20px 60px rgba(26, 158, 150, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+/* Coming Soon Banner */
+.coming-soon-banner {
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.1), rgba(255, 200, 87, 0.15));
+    padding: 2.5rem 5%;
+    text-align: center;
+}
+
+.coming-soon-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coming-soon-badge-inline {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.coming-soon-banner h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0;
+}
+
+/* What to Expect Section */
+.what-to-expect {
+    padding: 4rem 5%;
+    background: var(--cream);
+}
+
+.what-to-expect .section-header {
+    margin-bottom: 2.5rem;
+}
+
+.what-to-expect .section-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.expect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.expect-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(26, 158, 150, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.expect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(26, 158, 150, 0.12);
+    border-color: var(--teal-light);
+}
+
+.expect-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.expect-card h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+}
+
+.expect-card p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* CTA Section with Background Image */
+.cta-section-bg {
+    position: relative;
+    padding: 6rem 5%;
+    text-align: center;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/MicroCycle_Demo_Day_Quarter_Card.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 158, 150, 0.85), rgba(72, 201, 176, 0.85));
+    z-index: 1;
+}
+
+.cta-section-bg .cta-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-section-bg .cta-content h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-section-bg .cta-content p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.cta-section-bg .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Styles for Get the MicroCycler Page */
+@media (max-width: 1024px) {
+    .features-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .features-list {
+        align-items: center;
+    }
+    
+    .features-image-column {
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .expect-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-two-col {
+        padding: 3rem 5%;
+    }
+    
+    .feature-item span {
+        font-size: 1.2rem;
+    }
+    
+    .coming-soon-banner h2 {
+        font-size: 1.3rem;
+    }
+    
+    .expect-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .cta-section-bg {
+        padding: 4rem 5%;
+    }
+    
+    .cta-section-bg .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section-bg .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Coming Soon Section with Background Image */
+.coming-soon-section-bg {
+    position: relative;
+    padding: 5rem 5%;
+    text-align: center;
+    overflow: hidden;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/MicroCycle_Demo_Day_Quarter_Card.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.88), rgba(255, 200, 87, 0.88));
+    z-index: 1;
+}
+
+.coming-soon-section-bg .coming-soon-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.coming-soon-section-bg .coming-soon-badge {
+    display: inline-block;
+    background: white;
+    color: var(--orange);
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+.coming-soon-section-bg h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-section-bg p {
+    color: white;
+    font-size: 1.15rem;
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+.coming-soon-section-bg .coming-soon-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive for Coming Soon with BG */
+@media (max-width: 768px) {
+    .coming-soon-section-bg {
+        padding: 4rem 5%;
+        min-height: 400px;
+    }
+    
+    .coming-soon-section-bg h2 {
+        font-size: 1.8rem;
+    }
+    
+    .coming-soon-section-bg p {
+        font-size: 1rem;
+    }
+}
