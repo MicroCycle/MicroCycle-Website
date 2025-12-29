@@ -246,8 +246,8 @@ nav.scrolled {
     transform: translateY(-50%);
     width: 500px;
     height: 500px;
-    z-index: 1;
-    opacity: 0.15;
+    z-index: 100;
+    opacity: 1;
     animation: floatBg 8s ease-in-out infinite;
 }
 
